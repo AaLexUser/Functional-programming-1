@@ -3,7 +3,8 @@
                            java-like-recur
                            largest-palindrome-tail-recur
                            largest-palindrome-modular largest-palindrome-map
-                           largest-palindrome-lazy]]
+                           largest-palindrome-lazy
+                           largest-palindrome-atom]]
             [clojure.test :refer [deftest is testing are run-tests]]))
 
 (deftest test-palindrom?
@@ -27,6 +28,7 @@
         largest-palindrome-tail-recur
         largest-palindrome-modular
         largest-palindrome-map
+        largest-palindrome-atom
         largest-palindrome-lazy))))
 
 (run-tests)

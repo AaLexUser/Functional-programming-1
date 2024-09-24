@@ -80,6 +80,7 @@
                      (if (> count max-count) count max-count)
                      (if (> count max-count) [a b] max-coeffs))))))
 
+;; 5. Special syntax, atoms
 (defn find-max-quadratic-special []
   (let [result (atom [0 0 0])]
     (doseq [a (range -999 1000)
@@ -90,7 +91,7 @@
     (let [[a b count] @result]
       {:product (* a b) :a a :b b :count count})))
 
-
+;; 6. Lazy collections
 (defn find-max-quadratic-lazy []
   (let [[a b count]
         (->> (for [a (range -999 1000)
